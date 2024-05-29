@@ -1,3 +1,73 @@
-.date {
-    font-size: 45px;
+.daysContainer{
+    width: 60%;
+    align-self: center;
+}
+
+.daysContainer ul{
+    padding-top: 5rem;
+    list-style: none;
+}
+
+.dayInfo{
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #999;
+    display: flex;
+    align-items: center;
+}
+
+.dayInfo img{
+    width: 80px;
+    margin: 0 2rem 0 1rem;
+}
+.dateInfo{
+    width: 4.7rem;
+    height: 4.7rem;
+    background-color: #FFF;
+    padding: .8rem;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dateday{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.weekday{
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.maxTemp{
+    color: #FF0000;
+}
+
+.minTemp{
+    color: rgb(0, 120, 233);
+}
+
+.tempDesc{
+    margin-left: 6.5rem;
+    width: 5rem;
+}
+
+.cloudiness{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 4rem;
+    width: 3.5rem;
+}
+
+.weekinfoContainer{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 5rem;
 }
