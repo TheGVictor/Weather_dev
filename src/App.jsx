@@ -14,11 +14,9 @@ function App() {
 
 const [weather, setWeather] = useState([])
 const [city, setCity] = useState()
+const [show, setShow] = useState(4)
 
 const url = "https://api.hgbrasil.com/weather?format=json-cors&key=e47f8b67&user_ip=remote"
-
-
-
 
 useEffect(() => {
   async function getWeather() {
@@ -45,10 +43,9 @@ useEffect(() => {
   
 },[])
 
-const handleShowMore = (e) => {
-
-  
-
+const handleShowMore = () => {
+  setShow(7)
+  document.querySelector('.btnShowMore').style.display = "none"
 }
 
   return (
@@ -76,9 +73,11 @@ const handleShowMore = (e) => {
             <li key={item.date}>
               <NextDays weather={item}/>
             </li>
-          )).splice(1, 4)}
+          )).splice(1, show)}
         </ul>
-          <input type="submit" value="Carregar mais" className = "btnShowMore" onClick={handleShowMore}/>
+          <button className="btnShowMore" onClick={handleShowMore}>
+            Carregar mais
+          </button>
 
 
     </div>
