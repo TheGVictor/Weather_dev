@@ -8,6 +8,7 @@ import MainWeather from './Components/MainWeather'
 import PlusWeather from './Components/PlusWeather'
 import NextDays from './Components/NextDays'
 import Footer from './Components/Footer'
+import axios from 'axios'
 
 export const urlImg = "https://assets.hgbrasil.com/weather/icons/conditions"
 
@@ -16,8 +17,10 @@ function App() {
 const [weather, setWeather] = useState([])
 const [city, setCity] = useState()
 const [show, setShow] = useState(4)
+const [background, setBackground] = useState([])
 
 const url = "https://api.hgbrasil.com/weather?format=json-cors&key=e47f8b67&user_ip=remote"
+const bgUrl = "https://api.unsplash.com/search/photos"
 
 useEffect(() => {
   async function getWeather() {
@@ -39,8 +42,19 @@ useEffect(() => {
       nextDays: data.results.forecast
   })
   }
+
+  async function getBackground(){
+    try{
+      const {data} = await axios.get(`${bgUrl}?query=${weather.city}&page=2&per_page=1&client_id=${import.meta.env.VITE_KEY}`)
+      setBackground(data.results)
+      console.log(data.results)
+    }catch(error){
+      console.log(error)
+    }
+
+  }
   getWeather()
-  
+  getBackground()
 },[])
 
 const handleShowMore = () => {
@@ -53,13 +67,24 @@ const handleShowMore = () => {
       <div className="headerContainer">
         <div className="header">
           <div className="title">
-            <img src={icon}/> <span>Weather's Dev</span>
+            <img src={icon}/><span>Weather's Dev</span>
           </div>
           <input type="text" placeholder='Type a city...' value={city} onChange={(e) => setCity(e.target.value)} className='inputContainer'/>
           <span><a href="https://hgbrasil.com/" target='_blank'>HGBrasil</a></span>
         </div>
       </div>
-      <div className={`mainContainer ${weather.currently === "dia" ? "day" : "night"}`}>
+
+      
+      <div className="mainContainer">
+        {background.map((img) => (
+          <img
+          key={img.id}
+           src={img.urls.full}
+           alt={img.alt_description} 
+           className='bgCity'
+           />
+        ))}
+        
       <MainWeather weather={weather}/>
       <PlusWeather weather = {weather}/>
       </div>
@@ -78,7 +103,6 @@ const handleShowMore = () => {
           <button className="btnShowMore" onClick={handleShowMore}>
             Carregar mais
           </button>
-
 
     </div>
     </div>

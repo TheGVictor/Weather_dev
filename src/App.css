@@ -73,25 +73,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10rem;
     border-bottom-style: groove;
+    background-color: #000;
 }
 
-.bgUrl{
-    background-size: cover;
-    background-position: center;
+.bgCity{
+    opacity: 0.2;
+    width: inherit;
+    height: inherit;
+    position: absolute;
     
-}
-
-.day{
-    background-image: url('./assets/day.jpg');    
-    background-size: cover;
-    background-position: center;
-}
-
-.night{
-    background-image: url('./assets/night.jpg');    
-    background-size: cover;
-    background-position: center;
 }
 
 .btnShowMore{
