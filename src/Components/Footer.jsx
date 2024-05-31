@@ -13,7 +13,7 @@ const Footer = () => {
           </div>
           <aside className="personalInfo">
             <a href="https://github.com/thegvictor" target="_blank"><FaGithub/></a>
-            <a href="" target="_blank"><FaLinkedin/></a>
+            <a href="https://www.linkedin.com/in/gabriel-sancinetti-754548264/" target="_blank"><FaLinkedin/></a>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gabrielsancinetti@gmail.com&su=A very important topic&body=Hello, Gabriel! I'd like to talk about..." target="_blank"><MdEmail/></a>
           </aside>
           </div>
