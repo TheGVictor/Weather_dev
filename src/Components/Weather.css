@@ -49,6 +49,17 @@
     column-gap: 2rem;
 }
 
-.plusInfo i {
-    color: #adadad;
+.plusInfo span {
+    display: flex;
+    align-items: center;
 }
+
+.iconInfo{
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: #006391;
+    padding: .3rem;
+    margin-right: .3rem;
+}
+
+

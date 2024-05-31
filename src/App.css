@@ -7,7 +7,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 10rem;
 }
 
 .title{
@@ -68,27 +67,25 @@
 }
 
 .mainContainer {
-    width: 100vw;
+    width: 100%;
     height: 70vh;
     top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 10px solid #000;
     border-bottom-style: groove;
 }
 
 .bgUrl{
     background-size: cover;
     background-position: center;
-    box-shadow: 20px 5px 50px #436270;
+    
 }
 
 .day{
     background-image: url('./assets/day.jpg');    
     background-size: cover;
     background-position: center;
-    box-shadow: 20px 5px 50px #436270;
 }
 
 .night{
@@ -113,6 +110,4 @@
 .btnShowMore:hover{
     background-color: #005075;
 }
-
-
 

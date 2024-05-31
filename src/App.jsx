@@ -7,6 +7,7 @@ import icon from "./assets/sunIcon.png"
 import MainWeather from './Components/MainWeather'
 import PlusWeather from './Components/PlusWeather'
 import NextDays from './Components/NextDays'
+import Footer from './Components/Footer'
 
 export const urlImg = "https://assets.hgbrasil.com/weather/icons/conditions"
 
@@ -36,7 +37,6 @@ useEffect(() => {
       wind_speedy: data.results.wind_speedy,
       humidity: data.results.humidity,
       nextDays: data.results.forecast
-
   })
   }
   getWeather()
@@ -82,6 +82,7 @@ const handleShowMore = () => {
 
     </div>
     </div>
+          <Footer/>
     </div>
   )
 }
