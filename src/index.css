@@ -7,3 +7,142 @@
   box-sizing: border-box;
   
 }
+
+@media (max-width: 1080px) {
+  .daysContainer {
+      width: 80%;
+  }
+}
+
+@media (max-width: 915px) and (min-width: 430px){
+  .weatherContainer h1, h2{
+      font-size: 30px;
+  }
+
+  .plusInfo{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .daysContainer{
+    width: 100%;
+  }
+
+  .footer .personalInfo{
+    width: 30%;
+  }
+
+  .footer .title img {
+    width: 50px;
+  }
+
+  .footer .title span{
+    font-size: 25px;
+  }
+
+  .footer .title p {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 650px){
+
+.header{
+  width: 90%;
+  padding: .5rem 0;
+
+}
+.header .title img {
+  max-width: 20%;
+}
+
+.header a{
+  display: none;
+}
+
+  .header .title span{
+    font-size: 75%;
+  }
+
+  .mainContainer{
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .weatherContainer h1, h2{
+    font-size: 25px;
+  }
+
+  .weatherContainer h4{
+    font-size: 15px;
+  }
+
+  .weatherInfo img {
+    width: 70%;
+  }
+
+.plusInfo span{
+  font-size: 15px;
+}
+
+.weatherContainer:nth-child(3){
+  width: 75%;
+}
+
+  .title{
+    font-size: 30px;
+  }
+
+  .daysContainer{
+    width: 110%;
+  }
+
+  .dateInfo{
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .daysContainer img {
+    margin: 0 1rem 0 1rem;
+    max-width: 25%;
+  }
+
+  .cloudiness{
+    margin-left: 1rem;
+  }
+
+
+  .tempDesc{
+    display: none;
+  }
+
+.footer {
+  padding: 2rem;
+}
+
+  .footerContent{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .footer .title img {
+    width: 50px;
+  }
+
+  .footer .title span{
+    font-size: 25px;
+  }
+
+  .personalInfo{
+    width: 70%;
+    font-size: 20px;
+    padding-top: 2rem;
+  }
+
+  .footer .title p {
+    font-size: 10px;
+  }
+
+
+}

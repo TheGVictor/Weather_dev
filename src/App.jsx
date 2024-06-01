@@ -45,7 +45,7 @@ useEffect(() => {
 
   async function getBackground(){
     try{
-      const {data} = await axios.get(`${bgUrl}?query=${weather.city}&page=2&per_page=1&client_id=${import.meta.env.VITE_KEY}`)
+      const {data} = await axios.get(`${bgUrl}?query=${weather.city ? weather.city : "Beautifull background"}&page=1&per_page=1&client_id=${import.meta.env.VITE_KEY}`)
       setBackground(data.results)
       console.log(data.results)
     }catch(error){
@@ -69,7 +69,7 @@ const handleShowMore = () => {
           <div className="title">
             <img src={icon}/><span>Weather's Dev</span>
           </div>
-          <input type="text" placeholder='Type a city...' value={city} onChange={(e) => setCity(e.target.value)} className='inputContainer'/>
+          {/* <input type="text" placeholder='Type a city...' value={city} onChange={(e) => setCity(e.target.value)} className='inputContainer'/> */}
           <span><a href="https://hgbrasil.com/" target='_blank'>HGBrasil</a></span>
         </div>
       </div>
