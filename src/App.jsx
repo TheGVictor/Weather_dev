@@ -10,7 +10,12 @@ import NextDays from './Components/NextDays'
 import Footer from './Components/Footer'
 import axios from 'axios'
 
+
+
 export const urlImg = "https://assets.hgbrasil.com/weather/icons/conditions"
+
+
+
 
 function App() {
 
@@ -19,14 +24,20 @@ const [show, setShow] = useState(4)
 const [background, setBackground] = useState([])
 
 
-const url = "https://api.hgbrasil.com/weather?format=json-cors&key=e47f8b67"
-const bgUrl = "https://api.unsplash.com/search/photos"
+const url = "/api/weather?format=json-cors&key=e47f8b67";
+const bgUrl = "/unsplash/search/photos";
 
 useEffect(() => {
+
+
+
   async function getWeather() {
+
+    
+    
     const res = await fetch(url)
     const data = await res.json()
-    console.log(data)
+  
     setWeather({
       temp: data.results.temp,
       city: data.results.city_name,
@@ -47,9 +58,9 @@ useEffect(() => {
     try{
       const {data} = await axios.get(`${bgUrl}?query=${weather.city ? weather.city : "Beautifull background"}&page=1&per_page=1&client_id=${import.meta.env.VITE_KEY}`)
       setBackground(data.results)
-      console.log(data.results)
+
     }catch(error){
-      console.log(error)
+      window.alert("Algo deu errado, tente novamente")
     }
 
   }
