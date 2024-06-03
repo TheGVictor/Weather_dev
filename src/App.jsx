@@ -24,7 +24,7 @@ const [show, setShow] = useState(4)
 const [background, setBackground] = useState([])
 
 
-const url = "https://api.hgbrasil.com/weather?format=json-cors&key=e47f8b67"
+const url = "https://api.hgbrasil.com/weather?format=json-cors&key=e4faedfe "
 const bgUrl = "https://api.unsplash.com/search/photos"
 
 useEffect(() => {
