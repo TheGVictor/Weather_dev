@@ -15,11 +15,11 @@ export const urlImg = "https://assets.hgbrasil.com/weather/icons/conditions"
 function App() {
 
 const [weather, setWeather] = useState([])
-const [city, setCity] = useState()
 const [show, setShow] = useState(4)
 const [background, setBackground] = useState([])
 
-const url = "https://api.hgbrasil.com/weather?format=json-cors&key=e47f8b67&user_ip=remote"
+
+const url = "https://api.hgbrasil.com/weather?format=json-cors&key=e47f8b67"
 const bgUrl = "https://api.unsplash.com/search/photos"
 
 useEffect(() => {
