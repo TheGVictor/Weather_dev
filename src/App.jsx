@@ -24,8 +24,8 @@ const [show, setShow] = useState(4)
 const [background, setBackground] = useState([])
 
 
-const url = "/api/weather?format=json-cors&key=e47f8b67";
-const bgUrl = "/unsplash/search/photos";
+
+const bgUrl = "https://api.unsplash.com/search/photos"
 
 useEffect(() => {
 
@@ -35,7 +35,7 @@ useEffect(() => {
 
     
     
-    const res = await fetch(url)
+    const res = await fetch('/api')
     const data = await res.json()
   
     setWeather({

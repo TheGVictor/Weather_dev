@@ -8,15 +8,10 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://api.hgbrasil.com',
+        target: 'https://api.hgbrasil.com/weather?format=json-cors&key=e47f8b67', // URL da API de terceiros
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
+        rewrite: (path) => path.replace(/^\/api/, ''), 
       },
-      '/unsplash': {
-        target: 'https://api.unsplash.com',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/unsplash/, ''),
-      }
-    }
-  }
+    },
+  },
 })
