@@ -28,6 +28,7 @@ https://thegvictor.github.io/weather_dev/
 A refatoração do código é um passo essencial para manter a qualidade e a escalabilidade da aplicação. Ao reestruturar o código, reduzimos a redundância, melhoramos a legibilidade e tornamos mais fácil a adição de novas funcionalidades. A otimização do desempenho garante que os usuários tenham uma experiência suave e responsiva, mesmo em dispositivos com recursos limitados.
 
 
+
 🇺🇸: The code has been refactored and optimized, ensuring more efficient performance and a cleaner, easier-to-maintain codebase. Future versions will add a search bar so users can look up weather forecasts for cities other than their current location. Additionally, ongoing improvements will be made to the user experience, such as a more intuitive interface and faster load times.
 
 Refactoring the code is an essential step in maintaining the quality and scalability of the application. By restructuring the code, we reduce redundancy, improve readability, and make it easier to add new features. Performance optimization ensures that users have a smooth and responsive experience, even on devices with limited resources.
