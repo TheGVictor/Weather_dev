@@ -16,10 +16,8 @@ https://thegvictor.github.io/weather_dev/
 
 ## Screenshots
 
-Main page:
 ![image](https://github.com/TheGVictor/weather_dev/assets/86200641/1822f284-bb04-4aab-a540-6c077200bfad)
 
-Next days page:
 ![image](https://github.com/TheGVictor/weather_dev/assets/86200641/33e110c0-228a-4c3f-ae36-260d7fa48416)
 
 
