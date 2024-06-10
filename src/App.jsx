@@ -9,6 +9,7 @@ import PlusWeather from './Components/PlusWeather'
 import NextDays from './Components/NextDays'
 import Footer from './Components/Footer'
 import axios from 'axios'
+import Loading from './Components/Loading'
 
 
 
@@ -22,22 +23,18 @@ function App() {
 const [weather, setWeather] = useState([])
 const [show, setShow] = useState(4)
 const [background, setBackground] = useState([])
+const [showLoading, setShowLoading] = useState(false)
 
 
 const url = "https://api.hgbrasil.com/weather?format=json-cors&key=e4faedfe "
 const bgUrl = "https://api.unsplash.com/search/photos"
 
 useEffect(() => {
-
-
-
+  setShowLoading(true)
   async function getWeather() {
-
-    
-    
     const res = await fetch(url, {
       header: {
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "https:/thegvictor.github.io/*",
         "Access-Control-Allow-Origin": "GET, PUT, POST, DELETE"
       }
     })
@@ -57,6 +54,7 @@ useEffect(() => {
       humidity: data.results.humidity,
       nextDays: data.results.forecast
   })
+  setShowLoading(false)
   }
 
   async function getBackground(){
@@ -71,6 +69,7 @@ useEffect(() => {
   }
   getWeather()
   getBackground()
+  
 },[])
 
 const handleShowMore = () => {
@@ -92,6 +91,7 @@ const handleShowMore = () => {
 
       
       <div className="mainContainer">
+        
         {background.map((img) => (
           <img
           key={img.id}
@@ -123,6 +123,7 @@ const handleShowMore = () => {
     </div>
     </div>
           <Footer/>
+          { showLoading && <Loading/>}
     </div>
   )
 }
