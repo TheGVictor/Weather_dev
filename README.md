@@ -23,7 +23,13 @@ https://thegvictor.github.io/weather_dev/
 
 ## Melhorias
 
-O código foi refatorado e otimizado. Versões futuras irão adicionar a barra de pesquisa e uma melhor experiência ao usuário
+PT-BR: O código foi refatorado e otimizado, garantindo um desempenho mais eficiente e uma base de código mais limpa e fácil de manter. Versões futuras irão adicionar uma barra de pesquisa para que os usuários possam procurar previsões do tempo para outras cidades além da sua localização atual. Além disso, melhorias contínuas serão feitas na experiência do usuário, como uma interface mais intuitiva e tempos de carregamento mais rápidos.
+
+A refatoração do código é um passo essencial para manter a qualidade e a escalabilidade da aplicação. Ao reestruturar o código, reduzimos a redundância, melhoramos a legibilidade e tornamos mais fácil a adição de novas funcionalidades. A otimização do desempenho garante que os usuários tenham uma experiência suave e responsiva, mesmo em dispositivos com recursos limitados.
+
+EN: The code has been refactored and optimized, ensuring more efficient performance and a cleaner, easier-to-maintain codebase. Future versions will add a search bar so users can look up weather forecasts for cities other than their current location. Additionally, ongoing improvements will be made to the user experience, such as a more intuitive interface and faster load times.
+
+Refactoring the code is an essential step in maintaining the quality and scalability of the application. By restructuring the code, we reduce redundancy, improve readability, and make it easier to add new features. Performance optimization ensures that users have a smooth and responsive experience, even on devices with limited resources.
 
 <div align="center">
   
